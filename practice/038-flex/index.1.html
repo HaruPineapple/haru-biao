@@ -1,0 +1,44 @@
+<style>
+    .parent {
+        display: flex;
+        /*仅这一条是必要的，其他的都是辅助样式*/
+
+        border: solid;
+        margin: 10px 0;
+    }
+
+    .child {
+        border: solid tomato;
+        padding: 20px;
+    }
+    .parent.b {
+        flex-direction: row-reverse;
+    }
+    .parent.c {
+        flex-direction: column;
+    }
+    .parent.d {
+        flex-direction: column-reverse;
+    }
+</style>
+
+<div class="parent a">
+    <div class="child">A</div>
+    <div class="child">B</div>
+    <div class="child">C</div>
+</div>
+<div class="parent b">
+    <div class="child">A</div>
+    <div class="child">B</div>
+    <div class="child">C</div>
+</div>
+<div class="parent c">
+    <div class="child">A</div>
+    <div class="child">B</div>
+    <div class="child">C</div>
+</div>
+<div class="parent d">
+    <div class="child">A</div>
+    <div class="child">B</div>
+    <div class="child">C</div>
+</div>Î

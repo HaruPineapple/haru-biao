@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simhei,"宋体";
+    color: #999;
+    /* background: rgb(252, 221, 226); */
+    background: #eee;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+.nav a:hover,
+.main a:hover,
+.footer a:hover {
+    color: rgb(212, 167, 175);
+}
+.nav a:active,
+.main a:active,
+.footer a:active {
+    color: #e24233;
+}
+#menu-checkbox {
+    display: none;
+}
+.row {
+    display: flex;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .col-24,
+.col-23,
+.col-22,
+.col-21,
+.col-20,
+.col-19,
+.col-18,
+.col-17,
+.col-16,
+.col-15,
+.col-14,
+.col-13,
+.col-12,
+.col-11,
+.col-10,
+.col-9,
+.col-8,
+.col-7,
+.col-6,
+.col-5,
+.col-4,
+.col-3,
+.col-2,
+.col-1 {
+    display: flex;
+} */
+.col-24 {
+    flex-basis: 100%;
+}
+.col-23 {
+    flex-basis: 95.83333333333334%;
+}
+.col-22 {
+    flex-basis: 91.66666666666667%;
+}
+.col-21 {
+    flex-basis: 87.5%;
+}
+.col-20 {
+    flex-basis: 83.33333333333334%;
+}
+.col-19 {
+    flex-basis: 79.16666666666667%;
+}
+.col-18 {
+    flex-basis: 75%;
+}
+.col-17 {
+    flex-basis: 70.83333333333334%;
+}
+.col-16 {
+    flex-basis: 66.66666666666667%;
+}
+.col-15 {
+    flex-basis: 62.50000000000001%;
+}
+.col-14 {
+    flex-basis: 58.333333333333336%;
+}
+.col-13 {
+    flex-basis: 54.16666666666667%;
+}
+.col-12 {
+    flex-basis: 50%;
+}
+.col-11 {
+    flex-basis: 45.833333333333336%;
+}
+.col-10 {
+    flex-basis: 41.66666666666667%;
+}
+.col-9 {
+    flex-basis: 37.5%;
+}
+.col-8 {
+    flex-basis: 33.333333333333336%;
+}
+.col-7 {
+    flex-basis: 29.166666666666668%;
+}
+.col-6 {
+    flex-basis: 25%;
+}
+.col-5 {
+    flex-basis: 20.833333333333336%;
+}
+.col-4 {
+    flex-basis: 16.666666666666668%;
+}
+.col-3 {
+    flex-basis: 12.5%;
+}
+.col-2 {
+    flex-basis: 8.333333333333334%;
+}
+.col-1 {
+    flex-basis: 4.166666666666667%;
+}
+.nav {
+    padding: 20px 0;
+}
+.nav .row {
+    justify-content: space-between;
+}
+.nav .right a:last-child {
+    padding-right: 0;
+}
+a.unfold {
+    color: rgb(212, 167, 175);
+    display: inline-block;
+    margin-left: 10px;
+}
+.vote {
+    padding: 1em 0;
+    align-items: center;
+}
+.vote .time {
+    font-size: .2em;
+}
+.vote .like button {
+    padding: 8px 35px;
+    background: rgba(0, 0, 0, .1);
+    color: #e24233;
+    border: solid 1px #e24233;
+    border-radius: 15px;
+
+}
+.vote .like button:hover,
+.vote .like button:active {
+    background: #e24233;
+    color: #eee;
+}
+.footer {
+    padding: 20px 0 40px 0;
+    border-top: solid 1px rgba(211, 172, 179, .5);
+    margin-top: 20px;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.footer .link-group > a,
+.footer .mate-group > a {
+    margin-right: 5px;
+}
+.footer .center .title,
+.footer .center .sub-title {
+    color: rgba(211, 172, 179, .5);
+}
+.footer .center a:hover {
+    color: rgb(212, 167, 175);
+}
+.footer .center .title {
+    font-size: 5em;
+    font-weight: 900;
+}
+.footer .center .sub-title {
+    font-size: 1em;
+    font-weight: lighter;
+}
+.footer .contect {
+    padding: 10px 0;
+    justify-content: space-between;
+}
+.footer .contect span {
+    display: inline-block;
+    background: url(./img/icons_2x.png);
+    height: 65px;
+    width: 65px;
+}
+.footer .contect .wechat span {
+    background-position: 1878px 890px;
+}
+.footer .contect .wechat span:hover {
+    background-position: 1878px 806px;
+}
+.footer .contect .weibo span {
+    background-position: 1794px 890px;
+}
+.footer .contect .weibo span:hover {
+    background-position: 1794px 806px;
+}
+.footer .contect .facebook span {
+    background-position: 1626px 890px;
+}
+.footer .contect .facebook span:hover {
+    background-position: 1626px 806px;
+}
+

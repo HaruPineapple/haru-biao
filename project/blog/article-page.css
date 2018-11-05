@@ -1,0 +1,67 @@
+h1 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 4em;
+    line-height: 1.2em;
+    text-decoration: underline;
+}
+.main {
+    background: rgba(211, 172, 179, .5);
+    position: relative;
+    padding-bottom: 100px;
+}
+.head {
+    padding: 40px 0;
+}
+.main .img {
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.status {
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.status >* {
+    padding: 0 30px;
+    font-size: .2em;
+}
+img {
+    max-width: 100%;
+}
+.article {
+    padding: 20px 0 30px 0;
+}
+.article .text {
+    font-size: 20px;
+    line-height: 1.5em;
+    padding: 20px 0;
+}
+.liked {
+    padding: 0 20px;
+    text-decoration: underline;
+}
+.about {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: solid 1px #999;
+}
+.about a{
+    text-decoration: underline;
+    color: rgb(212, 167, 175);
+}
+/* .card-group {
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 10px 20px;
+    line-height: 1.4em;
+}
+
+.card:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+.card .title {
+    padding: 1.3em 0 1em 0;
+    font-weight: 600;
+} */

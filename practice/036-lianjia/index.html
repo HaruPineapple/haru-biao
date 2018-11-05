@@ -1,0 +1,701 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        font-size: 13px;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .fl, .fr {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .fl {
+        float: left;
+    }
+    .fr {
+        float: right;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .text-left {
+        text-align: left;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .row:before,
+    .row:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .container {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .col-24 {
+        width: 100%;
+    }
+    .col-23 {
+        width: 95.83333333333334%;
+    }
+    .col-22 {
+        width: 91.66666666666667%;
+    }
+    .col-21 {
+        width: 87.5%;
+    }
+    .col-20 {
+        width: 83.33333333333334%;
+    }
+    .col-19 {
+        width: 79.16666666666667%;
+    }
+    .col-18 {
+        width: 75%;
+    }
+    .col-17 {
+        width: 70.83333333333334%;
+    }
+    .col-16 {
+        width: 66.66666666666667%;
+    }
+    .col-15 {
+        width: 62.50000000000001%;
+    }
+    .col-14 {
+        width: 58.333333333333336%;
+    }
+    .col-13 {
+        width: 54.16666666666667%;
+    }
+    .col-12 {
+        width: 50%;
+    }
+    .col-11 {
+        width: 45.833333333333336%;
+    }
+    .col-10 {
+        width: 41.66666666666667%;
+    }
+    .col-9 {
+        width: 37.5%;
+    }
+    .col-8 {
+        width: 33.333333333333336%;
+    }
+    .col-7 {
+        width: 29.166666666666668%;
+    }
+    .col-6 {
+        width: 25%;
+    }
+    .col-5 {
+        width: 20.833333333333336%;
+    }
+    .col-4 {
+        width: 16.666666666666668%;
+    }
+    .col-3 {
+        width: 12.5%;
+    }
+    .col-2 {
+        width: 8.333333333333334%;
+    }
+    .col-1 {
+        width: 4.166666666666667%;
+    }
+    .first-screen {
+        background: #666;
+        color: #fff;
+    }
+    .first-screen a {
+        padding: 0 .5em;
+    }
+    .nav {
+        padding-top: 20px;
+        /* color: #fff; */
+    }
+    .logo {
+        display: inline-block;
+        background: url(./img/lianjia-sprite-x1.png);
+        width: 110px;
+        height: 50px;
+        background-position: -18px -377px;
+    }
+    .location {
+        display: inline-block;
+        position: relative;
+        padding: 2px 9px;
+        top: -18px;
+        background: rgba(0, 0, 0, .3);
+        border-radius: 15px;
+        font-size: 9px;
+    }
+    .location-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1.5em;
+        background: url(./img/lianjia-sprite-x1.png);
+        background-position: -189px -18px;
+    }
+    
+    .user {
+        font-size: 9px;
+        font-weight: lighter;
+        margin-bottom: 5px;
+    }
+    .centered {
+        text-align: center;
+        /* color: #fff; */
+        max-width: 65%;
+        margin: 90px auto;
+
+    }
+    .header .title {
+        font-size: 50px;
+        line-height: 1.1em;
+        font-weight: bolder;
+    }
+    .header .sub-title {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    .search {
+        margin-top: 20px;
+    }
+    .search .fl {
+        padding: 0;
+    }
+    .cat {
+        font-size: 10px;
+        font-weight: lighter;
+        padding: 0 10px;
+        color: rgba(255, 255, 255, .5)
+    }
+    .cat.active {
+        color: #fff;
+    }
+    .cat:first-child {
+        padding-left: 0;
+    }
+    .search .pointer {
+        position: relative;
+        top: 4px;
+        left: 10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+    .search input,
+    .search button {
+        width: 100%;
+        /* margin-top: 10px; */
+        padding: 7px 0;
+        border: solid #fff;
+    }
+     
+    .search input {
+        font-size: 10px;        
+    }
+    .search button {
+        border: none;
+        font-size: 11px;  
+        background: #00ae66;
+        color: #fff;      
+    }
+    .anno {
+        padding-bottom: 10px;
+        font-size: 3px;
+        font-weight: lighter;
+    }
+    .support>* {
+        margin: .5em 0;
+    }
+    .support img {
+        max-width: 70px;
+    }
+    .support .disc {
+        font-size: 3px;
+        color: #ccc;
+    }
+    .app {
+        background: #eee;
+        padding: 50px 0;
+    }
+    
+    .app .slogen-img {
+        display: inline-block;
+        background: url(./img/lianjia-sprite-x1.png);
+        width: 267px;
+        height: 119px;
+        background-position: -1200px -1415px;
+    }
+    .app .disc {
+        margin: 20px 0;
+        font-size: 10px;
+    }
+    .app .main-button-group {
+        padding-left: 0;
+    }
+    .app .iphone,
+    .app .android {
+        background: url(./img/lianjia-sprite-x1.png);
+        width: 135px;
+        height: 44px;
+        border-radius: 3px;
+    }
+    .app .iphone {
+        background-position: -316px -660px;
+        margin-bottom: 12px;
+        /* position: absolute;
+        top: 0; */
+    }
+    .app .android {
+        background-position: -316px -717px;
+        /* position: absolute;
+        bottom: 0; */
+    }
+    .qr-code span {
+        display: inline-block;
+        /* position: absolute;
+        left: 140px; */
+        background: url(./img/lianjia-sprite-x1.png);
+        width: 110px;
+        height: 135px;
+        background-position: -460px -660px;
+    }
+    /* .download-source {
+        position: relative;
+        max-height: 100px;
+    } */
+    .dim {
+        background: #eee;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .thin {
+        font-weight: lighter;
+    }
+    .main .card-group {
+        padding: 30px 0;
+    }
+    .main .card-group .title span:first-child {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .main .card-group .title span:last-child {
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    .main .card-group .sub-slogen {
+        font-size: 3px;
+        margin-top: 3px;
+    }
+    .main .card-group .sub-slogen .fl:first-child {
+        padding-left: 0;
+        color: #bbb;
+    }
+    .main .card-group .sub-slogen .fl:last-child {
+        color: #999;        
+    }
+    .card-group .with-info .fl>* {
+        margin-bottom: 10px;
+    }
+    
+    .card.shadow {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    }
+    .card .text {
+        background: #fff;
+    }
+    .card .text>* {
+        padding: 3px 8px;
+    }
+    .thumbnail {
+        position: relative;
+    }
+    .price-tag {
+        display: inline;
+        position: absolute;
+        top: 100px;
+        background: #555;
+        color: #fff;
+        padding: 5px;
+    }
+    .img-text {
+        position: absolute;
+        top: 40%;
+        right: 40%;
+    }
+    .img-text .title {
+        font-size: 17px;
+        color: #fff;
+    }
+    .img-text .price {
+        font-size: 10px;
+        color: gold;
+    }
+</style>
+
+<body>
+    <div class="row first-screen">
+        <div class="container">
+            <div class="row nav">
+                <div class="fl col-6">
+                    <!-- <img class="logo-img" src="" alt="logo"> -->
+                    <a href="#" class="logo"></a>
+                    <div class="location">
+                        <span class="location-icon"></span>
+                        <span class="city">深圳</span>
+                    </div>
+                </div>
+                <div class="fr col-18">
+                    <div class="row user text-right">
+                        <img src="" alt="">
+                        <a href="#">登录</a>
+                        <a href="#">立即注册</a>
+                    </div>
+                    <div class="row link-group text-right">
+                        <a href="#">二手房</a>
+                        <a href="#">新房</a>
+                        <a href="#">租房</a>
+                        <a href="#">旅居</a>
+                        <a href="#">海外</a>
+                        <a href="#">小区</a>
+                        <a href="#">经纪人</a>
+                        <a href="#">指南</a>
+                        <a href="#">房价</a>
+                        <a href="#">工具</a>
+                        <a href="#">发布房源</a>
+                    </div>
+                </div>
+            </div>
+            <div class="centered">
+                <div class="row header">
+                    <div class="title">连接每个家的故事</div>
+                    <div class="sub-title">深圳链家真实在售二手房5355套</div>
+                </div>
+                <div class="row search">
+                    <div class="row text-left cat-group">
+                        <span class="cat active">找二手房</span>
+                        <span class="cat">找新房</span>
+                        <span class="cat">找租房</span>
+                        <span class="cat">找小区</span>
+                    </div>
+                    <div class="pointer"></div>
+                    <div class="row">
+                        <div class="fl col-20">
+                            <input type="text" placeholder="请输入区域、商圈或小区名开始找房">
+                        </div>
+                        <div class="fl col-4">
+                            <button>开始找房</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row anno">
+                <a href="#">关于仿冒我公司进行不正当竞争行为的郑重声明</a>
+                <a href="#">房地产中介诚信服务承诺及保证书</a>
+                <a href="#">链家购房安心承诺 亿元保障</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="support-group">
+            <div class="container row">
+
+                <div class="fl col-8 support text-center">
+                    <img src="./img/support-1.png" alt="">
+                    <div class="title">找二手房</div>
+                    <div class="disc">真实二手房源，链家承诺真实在售<br>所见即真</div>
+                    <!-- <div class="disc">所见即真</div> -->
+                </div>
+                <div class="fl col-8 support text-center">
+                    <img src="./img/support-2.png" alt="">
+                    <div class="title">找二手房</div>
+                    <div class="disc">真实二手房源，链家承诺真实在售<br>所见即真</div>
+                    <!-- <div class="disc">所见即真</div> -->
+                </div>
+                <div class="fl col-8 support text-center">
+                    <img src="./img/support-3.png" alt="">
+                    <div class="title">找二手房</div>
+                    <div class="disc">真实二手房源，链家承诺真实在售<br>所见即真</div>
+                    <!-- <div class="disc">所见即真</div> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="app">
+            <div class="container row">
+                <div class="fl col-10">
+                    <span class="slogen-img"></span>
+                    <!-- <img src="" alt=""> -->
+                    <div class="disc">集二手、新房、租房功能于一体，随时随地任性找房。IM匿名咨询让您放心，消息动态推送让您省心，服务承诺让您安心，数据百科锦囊让您感受贴心漫漫找房路，我们努力为您想更多。</div>
+                    <div class="row download-source">
+                        <div class="fl main-button-group">
+                            <!-- <div class="main-button-group"> -->
+                            <div>
+                                <button class="iphone"></button>
+                            </div>
+                            <div>
+                                <button class="android"></button>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="fl qr-code">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reco card-group">
+            <div class="container">
+                <div class="title">
+                    <span>二手好房</span>
+                    <span>为你而选</span>
+                </div>
+                <div class="row sub-slogen">
+                    <div class="fl col-12">好房源那么多，我们为你而精选，链家网会越来越懂你</div>
+                    <div class="fl col-12 text-right">更多深圳二手房</div>
+                </div>
+                <div class="row with-info card-group">
+                    <div class="fl col-6">
+                        <div class="card shadow">
+                            <div class="thumbnail">
+                                <img src="http://www.dummyimage.com/300x200" alt="">
+                                <span class="price-tag">500万</span>
+                            </div>
+                            <div class="text">
+                                <div class="title">莲花山旁近地铁 07年小区</div>
+                                <div class="disc thin">凯旋豪庭 2室1厅 66.67平米</div>
+                            </div>
+                        </div>
+                        <div class="info">近期关注度较高房源</div>
+                    </div>
+                    <div class="fl col-6">
+                        <div class="card shadow">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                            <span class="price-tag">500万</span>
+                            <div class="text">
+                                <div class="title">莲花山旁近地铁 07年小区</div>
+                                <div class="disc thin">凯旋豪庭 2室1厅 66.67平米</div>
+                            </div>
+                        </div>
+                        <div class="info">近期关注度较高房源</div>
+                    </div>
+                    <div class="fl col-6">
+                        <div class="card shadow">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                            <span class="price-tag">500万</span>
+                            <div class="text">
+                                <div class="title">莲花山旁近地铁 07年小区</div>
+                                <div class="disc thin">凯旋豪庭 2室1厅 66.67平米</div>
+                            </div>
+                        </div>
+                        <div class="info">近期关注度较高房源</div>
+                    </div>
+                    <div class="fl col-6">
+                        <div class="card shadow">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                            <span class="price-tag">500万</span>
+                            <div class="text">
+                                <div class="title">莲花山旁近地铁 07年小区</div>
+                                <div class="disc thin">凯旋豪庭 2室1厅 66.67平米</div>
+                            </div>
+                        </div>
+                        <div class="info">近期关注度较高房源</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row reco card-group dim">
+            <div class="container">
+                <div class="row title">
+                    <span>小区</span>
+                    <span>为您推荐</span>
+                </div>
+                <div class="row sub-slogen">
+                    <div class="fl col-12">好房源那么多，我们为你而精选，链家网会越来越懂你</div>
+                    <div class="fl col-12 text-right">更多深圳小区</div>
+                </div>
+                <div class="row card-group">
+                    <div class="fl col-8">
+                        <div class="card shadow">
+                            <div class="thumbnail">
+                                <img src="http://www.dummyimage.com/300x200" alt="">
+                            </div>
+                            <div class="text row">
+                                <div class="row title bold">益田村</div>
+                                <div class="fl col-12 price bold">5355元／平</div>
+                                <div class="fl col-12 text-right birth thin">1996年建</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl col-8">
+                        <div class="card shadow">
+                        <div class="thumbnail">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                        </div>
+                        <div class="text row">
+                            <div class="row title bold">益田村</div>
+                            <div class="fl col-12 price bold">5355元／平</div>
+                            <div class="fl col-12 text-right birth thin">1996年建</div>
+                        </div>
+                        </div>
+                    </div>                
+                    <div class="fl col-8">
+                        <div class="card shadow">
+                            <div class="thumbnail">
+                                <img src="http://www.dummyimage.com/300x200" alt="">
+                            </div>
+                            <div class="text row">
+                                <div class="row title bold">益田村</div>
+                                <div class="fl col-12 price bold">5355元／平</div>
+                                <div class="fl col-12 text-right birth thin">1996年建</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row reco card-group">
+            <div class="container">
+                <div class="row title">
+                    <span>新房</span>
+                    <span>新起航</span>
+                </div>
+                <div class="row sub-slogen">
+                    <div class="fl col-12">真实信息准确同步，楼盘动态一手掌握</div>
+                    <div class="fl col-12 text-right">更多深圳新房</div>
+                </div>
+                <div class="row card-group">
+                    <div class="card fl col-8">
+                        <div class="thumbnail">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                            <span class="price-tag">98折</span>
+                            <div class="text-center img-text">
+                                <div class="title bold">时代天境</div>
+                                <div class="price">
+                                    <span class="bold">19500</span><span class="thin">元／平</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card fl col-8">
+                        <div class="thumbnail">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                            <span class="price-tag">98折</span>
+                            <div class="text-center img-text">
+                                <div class="title bold">时代天境</div>
+                                <div class="price">
+                                    <span class="bold">19500</span><span class="thin">元／平</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card fl col-8">
+                        <div class="thumbnail">
+                            <img src="http://www.dummyimage.com/300x200" alt="">
+                            <span class="price-tag">98折</span>
+                            <div class="text-center img-text">
+                                <div class="title bold">时代天境</div>
+                                <div class="price">
+                                    <span class="bold">19500</span><span class="thin">元／平</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row search">
+            <div class="container">
+                <div class="fl col-12 slogen">
+                    <img src="" alt="">
+                </div>
+                <div class="fl col-12 search">
+                    <div class="prom">
+                        真实存在，真实在售，真实价格，真实图片！<br>
+                        链家郑重向用户承诺：真实房源，假一赔百元！
+                    </div>
+                    <input type="text" placeholder="请输入链家编号查询真伪">
+                    <button>搜</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row link-group">
+                <a href="#">了解链家</a>
+                <a href="#">关于链家</a>
+                <a href="#">联系我们</a>
+                <a href="#">加入我们</a>
+                <a href="#">隐私声明</a>
+                <a href="#">网站地图</a>
+                <a href="#">友情链接</a>
+                <a href="#">经纪人登录</a>
+            </div>
+            <div class="row link-cat-group">
+                <div class="row">
+                    <div class="fl col-18 cat-group">
+                        <button>城市二手房</button>
+                        <button>热门小区</button>
+                        <button>百科</button>
+                        <button>租房</button>
+                    </div>
+                    <div class="fl col-6 text-right tele">
+                        <a href="#">官方客服 1010 9666</a>
+                    </div>
+                </div>
+                <div class="row link-group">
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                    <a href="#">这里二手房</a>
+                    <a href="#">那里二手房</a>
+                </div>
+            </div>
+            <div class="row mate">
+                <div>
+                    家网（北京）科技有限公司 | 网络经营许可证 京ICP备16057509号-2 | © Copyright©2010-2018 链家网Lianjia.com版权所有
+                </div>
+                <div>
+                    京公网安备 11010802024019号
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
