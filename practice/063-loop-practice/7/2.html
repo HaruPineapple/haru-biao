@@ -1,0 +1,29 @@
+<script>
+    let list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
+    let level1 = '第一级：';
+    let level2 = '第二级：';
+    let level3 = '第三级：';
+
+    for (let a = 0; a < list.length; a++) {
+        let it1 = list[a];
+        if (typeof it1 == 'string') {
+            level1 += it1 + ' ';
+        } else {
+            for (let b = 0; b < it1.length; b++) {
+                let it2 = it1[b];
+                if (typeof it2 == 'string') {
+                    level2 += it2 + ' ';
+                } else {
+                    for (let c = 0; c < it2.length; c++) {
+                        let it3 = it2[c];
+                        level3 += it3 + ' ';
+                    }
+                }
+            }
+        }
+    };
+    console.log(level1);
+    console.log(level2);
+    console.log(level3);
+
+</script>

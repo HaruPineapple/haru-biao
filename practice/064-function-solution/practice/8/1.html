@@ -1,0 +1,14 @@
+<!-- 造一个函数filterGlue，可以传入数组，且只连接内部所有的字符串元素 -->
+<script>
+    function filterGlue(arr){
+        let result='';
+        for(let i =0;i<arr.length;i++){
+            if(typeof arr[i]!='string')
+                continue;
+            result+=arr[i];
+        }
+        console.log(result);
+    }
+
+    filterGlue([1, 2, 'Yo', 'ha']);
+</script>

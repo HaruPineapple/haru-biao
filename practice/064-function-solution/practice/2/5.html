@@ -1,0 +1,20 @@
+<!-- 造一个函数printer
+
+printer(arr, breaker) 会分别打印数组arr中的每一项，且只打印breaker以前的元素 -->
+<script>
+    let list = [
+        '王花花',
+        '刘备备',
+        '李拴蛋',
+        '赵可爽',
+    ];
+    function printer(arr, breaker){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]==breaker){
+                break;
+            }
+            console.log(arr[i]);
+        }
+    }
+    printer(list, '赵可爽');
+</script>

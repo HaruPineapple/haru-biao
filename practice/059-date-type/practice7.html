@@ -1,0 +1,15 @@
+<!-- 取到并打印下列变量中的666 -->
+<script>
+    ; (function () {
+        'use strict';
+        let obj = {
+            a: 1,
+            b: {
+                x: [
+                    2, { ya: [666] },
+                ],
+            },
+        };
+        console.log(obj.b.x[1].ya[0]);
+    })();
+</script>

@@ -1,0 +1,26 @@
+<script>
+    const list1 = [
+        '王花花',
+        '刘备备',
+        '李拴蛋',
+        '赵可爽',
+    ];
+    const list2 = [
+        'a',
+        'b',
+        'c',
+        'd',
+    ];
+    function breaker(badAss, list = list1) {
+
+        for (let i = 0; i < list.length; i++) {
+            let it = list[i];
+            if (it == badAss) {
+                break;
+            };
+            console.log(it);
+        }
+    }
+
+    breaker('b', list2);
+</script>

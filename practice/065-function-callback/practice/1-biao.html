@@ -1,0 +1,119 @@
+<script>
+    /**
+     * 数字数组处理（基础函数）
+     * @param {Array} arr
+     * @param {Function} fn
+     * @return {*}
+     */
+    function eachNumber(arr, fn) {
+        for (let i = 0; i < arr.length; i++) {
+            // 返回回调函数的执行结果
+            fn(arr[i]);
+        }
+    }
+
+    /**
+     * 找偶数
+     * @param {Array} arr 数字组成的数组
+     * @return {Array} 数组，所有偶数
+     */
+    function evenNumber(arr) {
+        let result = [];
+
+        // 调用基础函数
+        eachNumber(arr, function (it) {
+
+            // 如果不是偶数就停止当前函数（匿名）
+            if (it % 2)
+                return;
+
+            result.push(it);
+        });
+
+        return result;
+    }
+
+    /**
+     * 找奇数
+     * @param {Array} arr 数字组成的数组
+     * @return {Array} 数组，所有奇数
+     */
+    function oddNumber(arr) {
+        let result = [];
+
+        // 调用基础函数
+        eachNumber(arr, function (it) {
+
+            // 如果不是奇数就停止当前函数（匿名）
+            if (!(it % 2))
+                return;
+
+            result.push(it);
+        });
+
+        return result;
+    }
+
+    /**
+     * 求数组中所有元素的和
+     * @param arr
+     * @return {number}
+     */
+    function sum(arr) {
+        let sum = 0;
+
+        // 调用基础函数
+        eachNumber(arr, it => sum += it /*追加每次循环*/);
+        return sum;
+    }
+
+    /**
+     * 找出数组中最大的值
+     * @param {Array} arr
+     * @return {number}
+     */
+    function max(arr) {
+        // 首先声明result，这样一来整个max函数内部都可见
+        let result;
+
+        // 调用基础函数
+        eachNumber(arr, it => {
+            // 如果是第一次，将第一个值存为结果，用于后面的运算
+            if (result === undefined) {
+                result = it;
+                return;
+            }
+
+            // 如果最新的值大于最大值那么它就是新的最大值
+            if (it > result)
+                result = it;
+        });
+
+        return result;
+    }
+
+    /**
+     * 找出数组中最小的值
+     * @param {Array} arr
+     * @return {number}
+     */
+    function min(arr) {
+        // 首先声明result，这样一来整个max函数内部都可见
+        let result;
+
+        // 调用基础函数
+        eachNumber(arr, it => {
+            // 如果是第一次，将第一个值存为结果，用于后面的运算
+            if (result === undefined) {
+                result = it;
+                return;
+            }
+
+            // 如果最新的值小于最小值那么它就是新的最小值
+            if (it < result)
+                result = it;
+        });
+
+        return result;
+    }
+</script>

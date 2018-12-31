@@ -1,0 +1,15 @@
+<script>
+    let list = [1, 3, 2, 7, 6];
+    function choose() {
+        let odds = [];
+        for (let i = 0; i < list.length; i++) {
+            let it = list[i];
+            if (!(it % 2)) {
+                continue;
+            };
+            odds.push(it);
+        };
+        console.log(odds);
+    }
+    choose();
+</script>

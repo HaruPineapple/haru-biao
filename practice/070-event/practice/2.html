@@ -1,0 +1,47 @@
+<body>
+    <button class="trigger">查看更多</button>
+
+    <div class="dropdown">
+        <a href="#">扫一扫</a>
+        <a href="#">加好友</a>
+        <a href="#">搜索</a>
+        <a href="#">帮助</a>
+        <a href="#">关于我们</a>
+    </div>
+</body>
+<style>
+    .dropdown {
+        padding: 10px;
+        display: inline-block;
+        background: #666;
+        color: #fff;
+    }
+
+    .dropdown a {
+        color: inherit;
+        display: block;
+        min-width: 100px;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+</style>
+<script>
+    const trigger = document.querySelector('.trigger');
+    const dropdown = document.querySelector('.dropdown');
+
+    document.body.addEventListener('click', (e) => {
+        let target = e.target;
+        if (target === trigger) {
+            dropdown.hidden = !dropdown.hidden;
+            return;
+        }
+        if (!target.closest('.dropdown'))
+            dropdown.hidden = true;
+    })
+
+    
+</script>

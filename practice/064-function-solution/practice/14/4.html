@@ -1,0 +1,27 @@
+<!-- 造一个函数search，输入查找范围和关键词返回搜索结果 -->
+
+<!-- 检查字符串中是否包含着另外一个字符串可以是使用.includes()方法。
+    如：'yo'.includes('y') // true -->
+<script>
+    let list = [
+        'abb',
+        'bcc',
+        'cdd',
+        'daa',
+    ];
+
+    function search(key){
+        let result=[];
+        for(let i = 0;i<list.length;i++){
+            let it=list[i];
+            if(!(it.includes(key))){
+                continue;
+            }
+            result.push(it);
+        }
+        console.log(result);
+    }
+
+    search('c');
+
+</script>

@@ -1,0 +1,27 @@
+<!-- 找出工资大于100的人，将找到的人放到一个数组里。 -->
+<script>
+    let list = [
+        {
+            name: '王花花',
+            salary: 100,
+        },
+        {
+            name: '李拴蛋',
+            salary: 200,
+        },
+        {
+            name: '牛备备',
+            salary: 300,
+        },
+    ];
+
+    let result=[];
+    for(let i = 0;i < list.length;i++){
+        let it=list[i];
+        if(it.salary<=100){
+            continue;
+        }
+        result.push(it.name);
+    };
+    console.log(result);
+</script>

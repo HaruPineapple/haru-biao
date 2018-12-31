@@ -1,0 +1,21 @@
+<!-- 找到下方数据中所有的对象，并分别打印出每个对象中的值为字符串的属性 -->
+<script>
+    ; (function () {
+        'use strict';
+        let obj = {
+            la: 'Ha',
+            v: 2,
+            p: [2, 5],
+            b: {
+                a: {
+                    name: 'White',
+                    yo: [5, 'a', 'c'],
+                    length: 100,
+                    map: true,
+                },
+            },
+        };
+        console.dir(obj.p);
+        console.dir(obj.b.a.yo);
+    })();
+</script>

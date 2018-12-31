@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script>
+    function cooking(吃什么, 几个人, 有无忌口) {
+        console.log('1.   买菜，买跟' + 吃什么() + '相关的食材;');
+        console.log('2.   煮饭，煮' + 几个人() + '个人的饭;');
+        console.log('3.   忌口是：' + 有无忌口() + ';');
+        console.log('4.   炒菜。');
+    }
+    cooking(想吃的菜, 吃饭人数, 忌口);
+    function 想吃的菜() {
+        return '宫保鸡丁';
+    };
+    function 吃饭人数() {
+        let familyNumber = 2;
+        let guestNumber = 0;
+        return familyNumber + guestNumber;
+    };
+    function 忌口() {
+        let familyNumber ='香菜';
+        let guestNumber = '';
+        return [familyNumber, guestNumber];
+    };
+</script>

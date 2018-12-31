@@ -1,0 +1,25 @@
+<!-- 找出所有姓王的人，将找到的人放到一个数组里。 -->
+<script>
+    let list = [
+        { name: '王花花' },
+        { name: '王拴蛋' },
+        { name: '牛备备' },
+    ];
+    function pick(familyName) {
+        let result = [];
+
+        for (let i = 0; i < list.length; i++) {
+            let it = list[i];
+
+            // 如果不以"王"开头，就直接跳过
+            if (!it.name.startsWith(familyName))
+                continue;
+
+            // 否则就推到数组里
+            result.push(it);
+        }
+
+        console.log(result);
+    }
+    pick('牛');
+</script>

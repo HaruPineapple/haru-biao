@@ -1,0 +1,17 @@
+<script>
+    let time = 'night';
+    let name = '李拴蛋';
+    let greeting;
+
+    if (time == 'noon') {
+        greeting = '吃了吗？';
+    } else if (time == 'afternoon') {
+        greeting = '加班吗？';
+    } else if (time = 'night') {
+        greeting == '去洗澡！';//为什么打印出来后时间undefined辽？
+    } else {
+        greeting == '你好，';
+    }
+
+    console.log(greeting + name);
+</script>

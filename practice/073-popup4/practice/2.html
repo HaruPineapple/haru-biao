@@ -1,0 +1,75 @@
+<style>
+    .popout {
+        padding: 10px;
+        display: inline-block;
+        position: absolute;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+        border-radius: 3px;
+        margin: 5px;
+        background: #fff;
+    }
+
+    [hidden] {
+        display: none !important;
+    }
+</style>
+
+<button data-popout="Yo yo yo..." id="trigger">Yo</button>
+<button data-popout="Ha ha ha..." id="trigger">Ha</button>
+
+<script>
+    let popouts = document.querySelectorAll('[data-popout]');
+    let triggers = new Set();
+
+    boot();
+
+    function boot() {
+        bindEvents();
+    }
+
+    /**
+    * 绑定事件 
+    */
+    function bindEvents() {
+        document.body.addEventListener('click', e => {
+            let el = e.target;
+            let content = el.dataset.popout;
+            if (content) {
+                show(el, content);
+                triggers.add(el);
+            } else {
+                hideAll(el);
+            }
+        });
+    }
+
+    /**
+     * @param {HTMLButtonElement} button
+     */
+    function show(button, content) {
+        if (!button.$popout) {
+            let popout = document.createElement('div');
+            popout.classList.add('popout');
+            popout.innerText = content;
+            button.$popout = popout;
+            document.body.appendChild(popout);
+        } else {
+            button.$popout.hidden = false;
+        }
+
+    }
+
+    /**
+     * 隐藏popout
+     * ＠param button
+     */
+    function hide(button) {
+        button.$popout.hidden = true;
+    }
+
+    function hideAll() {
+        triggers.forEach(button => {
+            button.$popout.hidden = true;
+        })
+    }
+</script>

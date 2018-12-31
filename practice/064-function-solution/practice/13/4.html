@@ -1,0 +1,13 @@
+<!-- 造一个函数evenMaker，生成新数组，数组中的元素均为偶数 -->
+<script>
+    function evenMaker(length){
+        let result=[];
+        for(let i =0;i<length;i++){
+            if(i%2)
+                continue;
+            result.push(i);
+        }
+        console.log(result)
+    }
+    evenMaker(8);
+</script>

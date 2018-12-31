@@ -1,0 +1,117 @@
+<style>
+    :root {
+        font-family: sans-serif;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        padding: .5em;
+        border: 1px solid;
+    }
+
+    .toolbar {
+        margin: 1em 0;
+    }
+</style>
+
+<h1>背背山中学花名册</h1>
+<div class="toolbar">
+    <div id="score-filter">
+        <button data-max="100" data-min="0" id="all">查看全部</button>
+        <button data-max="100" data-min="80" id="only-smart-ass">只看学霸</button>
+        <button data-max="80" data-min="60" id="only-smart-ass">只看学酥</button>
+        <button data-max="60" data-min="0" id="only-poor-ass">只看学渣</button>
+    </div>
+</div>
+<table>
+    <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>分数</th>
+        <th>操作</th>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+
+
+<script>
+    let tbody = document.getElementById('tbody');
+    let scoreFilter = document.getElementById('score-filter');
+
+    let boundary = {
+        max: 100,
+        min: 0,
+    }
+    let users = [
+        {
+            name: '王花花',
+            gender: 'male',
+            score: 20
+        },
+        {
+            name: '李拴蛋',
+            gender: 'female',
+            score: 65
+        },
+        {
+            name: '赵可爽',
+            gender: 'male',
+            score: 81
+        },
+    ];
+
+    boot();
+    function boot() {
+        render();
+        bindEvents();
+    }
+
+    function render(boundary) {
+        tbody.innerHTML = '';
+
+
+        users.forEach((user, i) => {
+
+            if (boundary) {
+                let valid =
+                    user.score < parseFloat(boundary.max) &&
+                    user.score > parseFloat(boundary.min);
+
+                if (!valid)
+                    return;
+            }
+
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+            <td>${user.name}</td>
+            <td>${user.gender}</td>
+            <td>${user.score}</td>
+            <td><button class='del'>del</button></td>
+            `;
+            let delButton = tr.querySelector('.del')
+            tbody.appendChild(tr);
+
+            delButton.addEventListener('click', () => {
+                users.splice(i, 1);
+                tr.remove();
+            })
+        });
+    }
+
+    function bindEvents() {
+        scoreFilter.addEventListener('click', e => {
+            let target = e.target;
+            if (target.nodeName != 'BUTTON')
+                return;
+            let range=target.dataset;
+            render(range)
+        })
+    }
+
+</script>

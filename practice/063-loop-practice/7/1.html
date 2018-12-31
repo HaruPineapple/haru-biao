@@ -1,0 +1,37 @@
+<script>
+    let list = ['a1', 'a2', ['b1', 'b2', ['c1', 'c2', 'c3'], 'b3'], 'a3'];
+    let level1 = '第1级: ';
+    let level2 = '第2级: ';
+    let level3 = '第3级: ';
+
+    // 第1级遍历
+    for (let i = 0; i < list.length; i++) {
+        let it = list[i];
+
+        // 如果是字符串
+        if (typeof it === 'string') {
+            // 就追加到当前层级的字符串上
+            level1 += it + ' '; 
+        } else { // 否则就是数组，那就继续循环
+            // 第2级遍历
+            for (let j = 0; j < it.length; j++) {
+                let it2 = it[j];
+
+                if (typeof it2 === 'string') {
+                    level2 += it2 + ' ';
+                } else {
+                    // 第3级遍历
+                    for (let k = 0; k < it2.length; k++) {
+                        let it3 = it2[k];
+                        // 最后一级只有字符串，所以直接追加就好
+                        level3 += it3 + ' ';
+                    }
+                }
+            }
+        }
+    }
+
+    console.log(level1);
+    console.log(level2);
+    console.log(level3);
+</script>

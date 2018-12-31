@@ -1,0 +1,72 @@
+<style>
+    :root {
+        font-family: sans-serif;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        padding: .5em;
+        border: 1px solid;
+    }
+</style>
+
+<h1>背背山中学花名册</h1>
+<table>
+    <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+<script>
+    let users = [
+        {
+            name: 'whh',
+            gender: 'male',
+            age: 12
+        },
+        {
+            name: 'lsd',
+            gender: 'female',
+            age: 14
+        },
+        {
+            name: 'zks',
+            gender: 'male',
+            age: 13
+        },
+    ];
+
+    boot();
+    function boot() {
+        render();
+    }
+
+    function render() {
+        users.forEach((user, i) => {
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+            <td>${user.name}</td>
+            <td>${user.gender}</td>
+            <td>${user.age}</td>
+            <td><button class='del'>del</button></td>
+            `;
+            let delButton = tr.querySelector('.del')
+            tbody.appendChild(tr);
+
+            delButton.addEventListener('click', () => {
+                users.splice(i, 1);
+                tr.remove();
+            })
+        });
+    }
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>18.2</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <label>
+            male
+            <input v-model="sex" value="male" type="checkbox">
+        </label>
+        <label>
+            female
+            <input v-model="sex" value="female" type="checkbox">
+        </label>
+        <br>
+        {{sex}} -->
+        <div>where r u from?</div>
+        <select v-model="from">
+            <option value="1">uk</option>
+            <option value="2">cn</option>
+        </select>
+        {{from}}
+        <div>where r u going to?</div>
+        <select v-model="dest" multiple>
+            <option value="1">uk</option>
+            <option value="2">cn</option>
+            <option value="3">cn</option>
+            <option value="4">cn</option>
+            <option value="5">cn</option>
+        </select>
+        {{dest}}
+        <!-- <textarea></textarea>
+        <select></select> -->
+    </div>
+    <script src=../lib/vue.js> </script> <script src=js/main.js> </script> </body> </html>

@@ -1,0 +1,42 @@
+<style>
+
+</style>
+
+<body>
+    <div id="dropdown" class="dropdown">
+    </div>
+</body>
+<script>
+    let dropdown = document.getElementById('dropdown');
+    let list = [
+        {
+            text: 'b',
+            href: 'http://biaoyansu.com'
+        },
+        {
+            text: 'c',
+            href: 'http://chaoshi.tmall.com',
+        },
+    ];
+    boot();
+    function boot() {
+        render();
+
+        setInterval(()=>{
+            list.push({
+                text:'d',
+                href:'http://douban.com',
+            });
+            render();
+        },1000)
+    }
+    function render() {
+        dropdown.innerHTML = '';
+        list.forEach(it => {
+            let a = document.createElement('a');
+            a.innerText = it.text;
+            a.href = it.href;
+            dropdown.appendChild(a);
+        });
+    }
+</script>

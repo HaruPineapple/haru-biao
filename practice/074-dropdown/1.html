@@ -1,0 +1,58 @@
+<style>
+    .dropdown {
+        min-width: 5em;
+        display: inline-block;
+        border: solid 2px;
+    }
+
+    .dropdown a {
+        display: block;
+        padding: 5px;
+    }
+</style>
+
+<div id="dropdown" class="dropdown">
+</div>
+
+<script>
+    // 管理员的js
+    let list = [
+        {
+            text: 'a',
+            href: 'http://z.cn',
+        },
+        {
+            text: 'b',
+            href: 'http://biaoyansu.com',
+        },
+        {
+            text: 'c',
+            href: 'http://chaoshi.tmall.com',
+        },
+        {
+            text: 'd',
+            href: 'http://douban.com',
+        },
+    ];
+    // 插件的js
+    boot();
+    function boot() {
+        render();
+        setInterval(() => {
+            list.push({
+                text: 'e',
+                href: 'http://ebay.com',
+            })
+            render();
+        }, 500)
+    }
+    function render() {
+        dropdown.innerHTML = '';
+        list.forEach(it => {
+            let a = document.createElement('a');
+            a.innerText = it.text;
+            a.href = it.href;
+            dropdown.appendChild(a);
+        })
+    }
+</script>

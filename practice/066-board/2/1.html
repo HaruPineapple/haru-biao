@@ -1,0 +1,33 @@
+<!-- 为广告牌添加边框，边框也要和文字一起闪 -->
+<div class="board">
+    <div class="inner">
+        修脚 贴膜
+    </div>
+</div>
+<style>
+    .board {
+        display: inline-block;
+        height: 30px;
+        width: 130px;
+        padding: 10px;
+        background: #000;
+        color: red;
+        line-height: 1em;
+        font-size: 30px;
+        border: 2px solid;
+    }
+</style>
+<script>
+    const board = document.querySelector('.board');
+    const inner = board.querySelector('.inner');
+    setInterval(function(){
+        let visible=getComputedStyle(inner).opacity=='1';
+        if(visible){
+            inner.style.opacity=0;
+            board.style.borderColor='transparent';
+        }else{
+            inner.style.opacity=1;
+            board.style.borderColor='inherit';
+        }
+    }, 500)
+</script>

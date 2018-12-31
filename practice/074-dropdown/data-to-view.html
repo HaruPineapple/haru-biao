@@ -1,0 +1,115 @@
+<style>
+    :root {
+        font-family: sans-serif;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        text-align: left;
+        padding: .5em;
+        border: solid 1px;
+    }
+
+    .toolbar {
+        margin: .5em 0;
+    }
+</style>
+
+<h1>sheet</h1>
+<div class="toolbar">
+    <div id="score-filter">
+        <button data-max="100" data-min="0">All</button>
+        <button data-max="100" data-min="80">smartAss</button>
+        <button data-max="80" data-min="60">normalAss</button>
+        <button data-max="60" data-min="0">poorAss</button>
+    </div>
+</div>
+<table>
+    <thead>
+        <th>name</th>
+        <th>gender</th>
+        <th>score</th>
+        <th>operate</th>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+</table>
+<script>
+    let tbody = document.getElementById('tbody');
+    let scoreFilter = document.getElementById('score-filter');
+
+    let users = [
+        {
+            name: 'whh',
+            gender: 'male',
+            score: 20,
+        },
+        {
+            name: 'lsd',
+            gender: 'female',
+            score: 65,
+        },
+        {
+            name: 'zks',
+            gender: 'male',
+            score: 85,
+        },
+    ];
+
+    boot();
+
+    function boot() {
+        render();
+        bindEvents();
+    };
+
+    function render(range) {
+        tbody.innerHTML = '';
+
+        users.forEach((user, i) => {
+            if (range) {
+                let inRange =
+                    user.score < +range.max &&
+                    user.score > +range.min;
+
+                if (!inRange)
+                    return;
+            }
+
+
+            let tr = document.createElement('tr');
+
+            tr.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.gender}</td>
+                <td>${user.score}</td>
+                <td><button class="del">del</button></td>
+            `;
+
+            let delButton = tr.querySelector('.del');
+            tbody.appendChild(tr);
+
+            delButton.addEventListener('click', () => {
+                users.splice(i, 1);
+                tr.remove();
+                render();
+                console.log(users);
+            });
+        });
+    };
+
+    function bindEvents() {
+        scoreFilter.addEventListener('click', e => {
+            let target = e.target;
+            if (target.nodeName != 'BUTTON')
+                return;
+            let range = target.dataset;
+            render(range);
+        });
+    }
+</script>

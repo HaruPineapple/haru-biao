@@ -1,0 +1,20 @@
+<!-- 取到并打印下列变量中的666 -->
+<script>
+    ; (function () {
+        'use strict';
+        let obj = {
+            a: 1,
+            b: {
+                yo: [
+                    2,
+                    'La',
+                    {
+                        muhaha: '~',
+                        a: 666,
+                    }
+                ],
+            },
+        };
+        console.log(obj.b.yo[2].a);
+    })();
+</script>
