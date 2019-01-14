@@ -1,55 +1,62 @@
+; (function () {
+    'use strict';
 
-window.vali = {
-    isUsername,
-    isEmail,
-    isPassword,
-    isPhone,
-    betweenLength,
-    between,
-    positive,
-}
+    window.vali = {
+        isUsername,
+        isEmail,
+        isPhone,
+        isPassword,
+        betweenLength,
+        between,
+        positive,
+    };
 
-function isUsername(str) {
-    if (!betweenLength(str, 4, 12) ||
-        str.includes('辣鸡')
-    ) return false;
 
-    return true;
-}
+        function isUsername(str) {
+            if (
+                !betweenLength(str, 4, 12) ||
+                str.includes('shit')
+            ) return false;
 
-function isEmail(str) {
-    if (!str.includes('@'))
-        return false;
+            return true;
+        };
 
-    return true;
-}
+        function isEmail(str) {
+            if (!str.includes('@'))
+                return false;
 
-function isPhone(str) {
-    if (str.length != 11 &&
-        str.length != 13 &&
-        str.length != 14 &&
-        !str.startsWith('1')
-    ) return false;
+            return true;
+        };
 
-    return true;
-}
+        function isPhone(str) {
+            if (
+                (str.length != 11 &&
+                    str.length != 13 &&
+                    str.length != 14) ||
+                !str.startsWith('1')
+            ) return false;
 
-function isPassword(str) {
-    if (!betweenLength(str, 6, 64))
-        return false;
+            return true;
+        };
 
-    return true;
-}
+        function isPassword(str) {
+            if (!betweenLength(str, 6, 64))
+                return false;
 
-function betweenLength(str, min, max) {
-    return between(str.length, min, max);
-}
+            return true;
+        };
 
-function between(num, min, max) {
-    return num >= min && num <= max;
-}
+        function betweenLength(str, min, max) {
+            return between(str.length, min, max);
+        };
 
-function positive(num) {
-    return num >= 0;
-}
+        function between(num, min, max) {
+            return num >= min && num <= max;
+        };
 
+        function positive(num) {
+            return num >= 0;
+        }
+    ;
+
+})();

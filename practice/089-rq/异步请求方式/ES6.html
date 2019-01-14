@@ -1,0 +1,10 @@
+<h1>Yo</h1>
+<script>
+    fetch('https://api.github.com/search/users?q=haru')
+        .then(response=>{
+            return response.json(); 
+        })
+        .then(data=>{
+            console.log(data);
+        })
+</script>

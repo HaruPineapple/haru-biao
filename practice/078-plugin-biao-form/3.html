@@ -1,0 +1,67 @@
+<style>
+    input {
+            width: 100%;
+        }
+    
+        input[type=checkbox],
+        input[type=radio]  {
+            width: auto;
+        }
+    </style>
+
+<form id="a">
+    <input type="text" name="name" placeholder="姓名" value="1">
+    <input type="text" name="age" placeholder="年龄" value="1">
+    <input type="text" name="gender" placeholder="性别" value="1">
+    <input type="text" name="height" placeholder="身高" value="1">
+    <button type="submit">提交</button>
+</form>
+<form id="b">
+    <input type="text" name="name" placeholder="姓名" value="2">
+    <input type="text" name="age" placeholder="年龄" value="2">
+    <input type="text" name="gender" placeholder="性别" value="2">
+    <input type="text" name="height" placeholder="身高" value="2">
+    <button type="submit">提交</button>
+</form>
+<form id="c">
+    <input type="text" name="name" placeholder="姓名" value="3">
+    <input type="text" name="age" placeholder="年龄" value="3">
+    <input type="text" name="gender" placeholder="性别" value="3">
+    <input type="text" name="height" placeholder="身高" value="3">
+    <button type="submit">提交</button>
+</form>
+
+
+<script>
+    // boot();
+
+    // function boot(){
+    //     getData();
+    //     setData();
+    // }
+
+    function getData(form) {
+        let data = {};
+        let inputs = form.querySelectorAll('[name]');
+        inputs.forEach(it => {
+            data[it.name] = it.value;
+        });
+    }
+
+    function setData(data, form) {
+        for (let key in data) {
+            let input = form.querySelector(`[name=${key}]`);
+            input.value = data[key];
+        }
+    }
+
+    dataA = {
+        name: 'whh',
+        age: 12,
+        gender: 'male',
+        height: 120,
+    }
+
+    console.log(getData(document.getElementById('a')));
+    setData(dataA, document.getElementById('b'))
+</script>

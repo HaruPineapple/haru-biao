@@ -1,52 +1,53 @@
 ; (function () {
     'use strict';
 
-    let bf, bt;
-
+    let bt, bf;
     let form = document.querySelector('form');
 
     let structure = {
-        username: '用户名',
+        name: '姓名',
         email: '邮箱',
         balance: '余额',
     }
+
     let list = [
         {
-            username: 'whh',
-            email: 'whh@biaoyansu.com',
+            name: 'whh',
+            email: 'whh@a.com',
             balance: 100,
         },
         {
-            username: 'lsd',
-            email: 'lsd@biaoyansu.com',
+            name: 'lsd',
+            email: 'lsd@a.com',
             balance: 120,
-        }
-    ];
+        },
+    ]
 
 
     boot();
 
     function boot() {
-        prepareForm();
+        perpareForm();
         prepareTable();
-    };
-
-    function prepareForm() {
-        bf = biaoForm('form', onSubmit);
     }
+
     function prepareTable() {
         let actions = {
             delete(tr, i) {
                 tr.remove();
                 list[i] = null;
             },
+
             update(tr, i) {
-                form.querySelector('[name=index]').value = i;
                 bf.setData(list[i]);
+                form.querySelector('[name=index]').value = i;
             },
         };
-
         bt = biaoTable('table', structure, list, actions);
+    }
+
+    function perpareForm() {
+        bf = biaoForm('form', onSubmit);
     }
 
     function onSubmit(row) {
@@ -57,4 +58,10 @@
 
         bt.render();
     }
+
 })();
+
+
+
+
+

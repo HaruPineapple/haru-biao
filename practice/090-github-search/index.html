@@ -1,0 +1,11 @@
+
+<script src="rq.js"></script>
+<script>
+    let url = 'https://api.github.com/search/users?q=haru';
+    rq.get(url, data => {
+        console.log(data);
+    });
+    // rq.post('https://api.github.com/search/users?q=haru',
+    // {},
+    // );
+</script>

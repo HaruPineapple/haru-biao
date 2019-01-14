@@ -1,0 +1,12 @@
+<h1>Yo</h1>
+<script>
+        let http=new XMLHttpRequest();
+        http.open('get','https://api.github.com/search/users?q=haru');
+        http.send();
+
+        http.addEventListener('load',()=>{
+            let data=JSON.parse(http.responseText);
+            console.log(data);
+        })
+
+</script>

@@ -1,0 +1,73 @@
+<style>
+    :root {
+        font-family: sans-serif;
+    }
+
+    table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        padding: .5em;
+        border: 1px solid;
+    }
+</style>
+
+<table id="order-table">
+    <thead></thead>
+    <tbody></tbody>
+</table>
+
+<script src='biaoTable.js'></script>
+<script>
+    let struct = {
+        oil: '订单号',
+        product: '产品',
+        totalCost: '总费用',
+    }
+    let users = [
+        {
+            oil: '001',
+            product: '拖鞋',
+            totalCost: 70,
+        },
+        {
+            oil: '002',
+            product: '毛裤',
+            totalCost: 80,
+        },
+        {
+            oil: '003',
+            product: '枸杞',
+            totalCost: 90,
+        },
+
+    ];
+
+    biaoTable.boot(
+        '#order-table',
+        struct,
+        users,
+        {
+            // delete: {
+            //     name: '删除',
+            //     action: function () {
+            //         console.log(1);
+            //     }
+            // },
+            Delete(tr,i) {
+                orders[i]=null;
+                tr.remove();
+                console.log(orders);
+            },
+            A() {
+                console.log('a');
+            },
+            B() {
+                console.log('b');
+            },
+        });
+</script>

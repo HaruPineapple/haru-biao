@@ -5,10 +5,19 @@
     }
 </style>
 
-<form>
+<form action="">
     <input type="text" name="name" placeholder="name" value="1">
     <input type="text" name="age" placeholder="age" value="2">
     <input type="text" name="gender" placeholder="gender" value="3">
     <input type="text" name="height" placeholder="height" value="4">
     <button type="submit">submit</button>
 </form>
+
+<script>
+    let data = {};
+    let inputs = document.querySelectorAll('[name]');
+    inputs.forEach(it => {
+        data[it.name]=it.value;
+    });
+    console.log(data);
+</script>

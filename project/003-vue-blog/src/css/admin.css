@@ -1,0 +1,23 @@
+form {
+    max-width: 400px;
+    display: block;
+  }
+  
+  form input,
+  form button[type=submit],
+  form textarea {
+    width: 100%;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  td:last-of-type,
+  th:last-of-type {
+    text-align: right;
+  }

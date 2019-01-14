@@ -24,20 +24,11 @@
         gender: '男',
         height: 160,
     };
-
-    let form = document.querySelector('form');
-
-    for (let key in data) {
-        let input = form.querySelector(`[name=${key}]`);
+    let form=document.querySelector('form');
+    for(let key in data){
+        // let input=form.queryselector(`[name=${key}]`);
+        let input=form.querySelector(`[name=${key}]`);
         input.value=data[key];
+        ;
     }
 </script>
-
-<!-- <script>
-    let data = {};
-    data.name = document.querySelector('[name=name]').value;
-    data.age = document.querySelector('[name=age]').value;
-    data.gender = document.querySelector('[name=gender]').value;
-    data.height = document.querySelector('[name=height]').value;
-    console.log(data);
-</script> -->

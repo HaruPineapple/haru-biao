@@ -34,43 +34,28 @@
 
 <script>
 
-    /**
-     *  解析表单获取数据 
-     * @param {HTMLFormElement} form 选好的form元素
-     * @return {object}
-     */
     function getData(form) {
         let data = {};
         let inputs = form.querySelectorAll('[name]');
-
         inputs.forEach(it => {
             data[it.name] = it.value;
         });
-
         return data;
     }
 
     function setData(data, form) {
+        
         for (let key in data) {
             let input = form.querySelector(`[name=${key}]`);
             input.value = data[key];
         }
     }
-
     let dataA = {
-        name: '王花花',
-        age: 2,
-        gender: '男',
-        height: 160,
-    };
-    let dataB = {
-        name: '李拴蛋',
-        age: 2,
-        gender: '男',
-        height: 160,
-    };
-
-    setData(dataA, document.getElementById('a'));
-    setData(dataB, document.getElementById('b'));
-    //console.log(getData(document.getElementById('a')))
+            name: '王花花',
+            age: 12,
+            gender: '男',
+            height: 160,
+        };
+    setData(dataA,document.getElementById('a'));
+    // console.log(getData(document.getElementById('a')));
 </script>

@@ -1,42 +1,47 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
 
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 
 <body>
-    <div id="dropdown" class="dropdown">
-    </div>
+    <div id="dropdown" class="dropdown"></div>
 </body>
+
+</html>
 <script>
-    let dropdown = document.getElementById('dropdown');
-    let list = [
+    let dropdown=document.getElementById('dropdown');
+    let list=[
         {
-            text: 'b',
-            href: 'http://biaoyansu.com'
+            text:'a',
+            href:'http://www.biaoyansu.com',
         },
         {
-            text: 'c',
-            href: 'http://chaoshi.tmall.com',
+            text:'b',
+            href:'http://www.biaoyansu.com',
+        },
+        {
+            text:'c',
+            href:'http://www.biaoyansu.com',
+        },
+        {
+            text:'d',
+            href:'http://www.biaoyansu.com',
         },
     ];
-    boot();
-    function boot() {
-        render();
-
-        setInterval(()=>{
-            list.push({
-                text:'d',
-                href:'http://douban.com',
-            });
-            render();
-        },1000)
-    }
-    function render() {
-        dropdown.innerHTML = '';
+    render();
+    function render(){
+        dropdown.innerHTML='';
         list.forEach(it => {
-            let a = document.createElement('a');
-            a.innerText = it.text;
-            a.href = it.href;
+            let a=document.createElement('a');
+            a.innerText=it.text;
+            a.href=it.href;
             dropdown.appendChild(a);
         });
     }
+    
 </script>
