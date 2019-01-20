@@ -128,3 +128,8 @@ th {
 .item .detail a{
   display: block;
 }
+
+.biao-page button.active{
+  background:#fff;
+  color:#000;
+}

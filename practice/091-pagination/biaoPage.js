@@ -12,5 +12,7 @@
         config = Object.assign({}, DEFAULT_CONFIG, settings);
     };
 
+    console.log(config);
+
     function render() { };
 })();

@@ -108,11 +108,12 @@
 
     window.valee = {
         validate(value, strRule) {
-            applyRules(value, parseRule(strRule));
+            return applyRules(value, parseRule(strRule));
         },
         is,
         applyRules,
-    }
+        
+    };
 
 
     function applyRules(value, rules) {
@@ -120,12 +121,17 @@
 
         for (let key in rules) {
             let ru = rules[key];
-            let result = is[key](value, ru);
-            if (!result)
-                valid = false;
+
+            try {
+                // 相当于 is.min(6, 10)
+                is[key](value, ru);
+            } catch (e) { // 捕获验证错误
+                // 推入错误数组中
+                errors.push(e);
+            }
         }
- 
-        return valid;
+
+        return errors;
     }
 
     function parseRule(str) {
