@@ -1,0 +1,15 @@
+<div id="app">
+    <p>{{ foo }}</p>
+    <button v-on:click="foo='baz'">change it</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var obj = {
+        foo: 'bar'
+    }
+    Object.freeze(obj);
+    new Vue = ({
+        el: '#app',
+        data: obj,
+    })
+</script>

@@ -1,0 +1,31 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .row:before,
+    .row:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .col {
+        float: left;
+        border: solid;
+    }
+
+    .first-child {
+        width: 50%;
+    }
+
+    .sec-child {
+        width: 25%;
+    }
+</style>
+
+<div class="row">
+    <div class="col first-child">1</div>
+    <div class="col sec-child">2</div>
+    <div class="col sec-child">3</div>
+</div>

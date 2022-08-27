@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <th>科目</th>
+                <th>分数</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>语文</td>
+                    <td><input type="number" v-model.number="chinese"></td>
+                </tr>
+                <tr>
+                    <td>数学</td>
+                    <td><input type="number" v-model.number="math"></td>
+                </tr>
+                <tr>
+                    <td>英语</td>
+                    <td><input type="number" v-model.number="english"></td>
+                </tr>
+                <tr>
+                    <td>total</td>
+                    <td>{{sum}}</td>
+                </tr>
+                <tr>
+                    <td>average</td>
+                    <td>{{average}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>

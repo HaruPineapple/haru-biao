@@ -1,0 +1,49 @@
+<style>
+    .box{
+        display: block;
+        background: grey;
+        width: 50%;
+    }
+    p span{
+        display: inline-block;
+    }
+    .inline{
+        color: blue;
+        background: rgba(255,0,0,.2);
+        padding: 10px;
+        margin: 20px 20px 0 80px;
+        border: solid rgba(255,10,10,.5) 5px;
+    }
+    span.yellow{
+        background: yellow;
+    }
+    #bad-ass{
+        background: greenyellow;
+        position: relative;
+        top: 10px;
+        left: 30px;
+    }
+</style>
+
+<body>
+    <!-- block -->
+    <span class="box">Yo</span>
+    <span class="box">Yoooooo</span>
+    <div class="box">Emm...</div>
+    <!-- inline -->
+    <span class="inline">Yooo</span>
+    <p>Lorem ipsum dolor sit amet consectetur <span class="inline">yooo</span> elit. Iusto fugiat enim repudiandae ut illum id ratione debitis, magnam veritatis impedit quisquam. Perspiciatis quaerat autem voluptatem ipsum corrupti tempora eligendi accusamus!</p>
+    <!-- position -->
+        <!-- static -->
+    <span>first</span>
+    <span>second</span>
+    <div>first</div>
+    <div>second</div>
+        <!-- relative -->
+    <span class="yellow">Yo</span>
+    <span class="yellow">Yo</span>
+    <span class="yellow">Yo</span>
+    <span class="yellow" id="bad-ass">Emm</span>
+    <span class="yellow">Yo</span>
+    <span class="yellow">Yo</span>
+</body>

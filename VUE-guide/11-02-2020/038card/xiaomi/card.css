@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.col-6 {
+    width: 25%;
+}
+
+.tc {
+    text-align: center;
+}
+
+.dl {
+    text-decoration: line-through;
+}
+
+.muted {
+    opacity: 50%;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+.price-tag:before {
+    content: '减';
+}
+
+.price-tag:after {
+    content: '元';
+}
+
+.price-tag {
+    width: 60;
+    text-align: center;
+    background: #b10;
+    padding: 3px 0;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    font-size: 12px;
+}
+
+.price>*:after {
+    content: '元';
+}
+
+.text {
+    padding: 1em 0;
+}
+
+.text>* {
+    margin: .5em 0;
+}
+
+.title {
+    font-weight: 800;
+}
+
+
+/* .desc {
+    padding: .5em 0;
+} */
+
+.price .pres {
+    color: rgb(255, 123, 0);
+}

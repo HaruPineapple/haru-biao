@@ -1,0 +1,24 @@
+<div id="app">
+    <div class="search-bar">
+        <form @submit.prevent="search()">
+            <input v-model="keyword" type="search" placeholder="搜本书">
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <div class="result">
+        <div v-for="book in result.books" class="result-item row">
+            <div class="col col-2">
+                <img :src="book.image">
+            </div>
+            <div class="col col-10">
+                <div class="title">{{book.title}}</div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://cdn.bootcss.com/vue/2.4.4/vue.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>

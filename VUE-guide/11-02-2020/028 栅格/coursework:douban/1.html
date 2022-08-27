@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>豆瓣栅格化</title>
+    <link rel="stylesheet" href="./col.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .row:after,
+        .row:before {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row head">
+        <div class="col-17">globle nav left</div>
+        <div class="col-7">globle nav right</div>
+    </div>
+    <div class="row body">
+        <div class="row page-nav">
+            <div class="col-4">LOGO</div>
+            <div class="col-13">page nav link-group</div>
+            <div class="col-7">page nav search</div>
+        </div>
+        <div class="row main-area">
+            <div class="row page-title">讨论精选</div>
+            <div class="row main">
+                <div class="col-16">time line area</div>
+                <div class="col-8">groups area</div>
+            </div>
+        </div>
+    </div>
+    <div class="row foot">
+        <div class="col-12">data</div>
+        <div class="col-12">link group</div>
+    </div>
+</body>
+
+</html>

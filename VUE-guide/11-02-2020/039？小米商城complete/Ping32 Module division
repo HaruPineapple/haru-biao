@@ -1,0 +1,17 @@
+开始：用图表展示终端重要信息的界面【为什么和后面的平级】 效率 工作效率统计：上（nav搜索范围和设置刷新）中（List）下（柱状图组） 防泄密&管理 防泄密 管理
+<!-- ------------------------------------------------------------ -->
+
+
+
+终端列表：左（终端List需双击）右（图表展示当前终端）【双击、只能选中一个、没有组的预览】 实时屏幕：popout左（终端Listcheckbox选中后）右（边列出已选终端点击确认popout已选终端的实时屏幕）【popout、checkbox、浪费右空间】 网络流量：上（总折线图）下（终端List） 远程协助：popout下拉菜单1（选部门）下拉菜单2（选终端）【popout、为什么不继承之前的List选择方式】 发送消息：popout写邮件样式选择对象为跳转到实时屏幕同样的页面。 生成客户端：popout一个按钮《生成安装包》点击后几秒打开生成的文件夹《set
+up》。 系统设置：popout 浏览网站：上（nav搜索范围和设置刷新导出）中（search bar）下（全部已浏览网站List） 即时通讯：上（提示语和设置中search bar）下（由新到旧排列的聊天记录） 电子邮件：上（nav搜索范围和设置刷新导出）中（search bar）下（由新到旧排列的聊天记录） 泄密追踪：上（nav搜索范围和设置刷新导出）中（search bar）下（由新到旧排列的聊天记录） 信息发布：上（nav搜索范围和设置刷新导出）中（search bar）下（由新到旧排列的聊天记录）
+文件操作：上（nav搜索范围和设置刷新导出）中（search bar）下（由新到旧排列的聊天记录） 打印日志：上（nav搜索范围和设置刷新导出）中（search bar）下（由新到旧排列的聊天记录） 剪切板记录：上（nav搜索范围和设置）中（search bar）下（由新到旧排列的聊天记录） 实时屏幕：popout左（终端Listcheckbox选中后）右（边列出已选终端点击确认）popout已选终端的实时屏幕。【popout、checkbox、浪费右空间】 智能截屏：左（终端List需双击右侧上方为catego选择nav
+屏幕录像：左（终端List需双击）右（List） 软件管控：上（增删策略button各一个点击后popout设置窗口）下（List） 聊天账号管控：上（增删策略button各一个点击后popout设置窗口）下（List） 系统策略：上（增删策略button各一个点击后popout设置窗口）下（List） 系统安全检测：左（安全对象List？）中（饼状图）右（总览List） 资产管理：左（统计对象List？）中（饼状图）右（总览List） 盗版软件检测：上（nav刷新导出）下（List） 离线策略：上（增删策略button各一个点击后popout设置窗口）下（List）
+移动存储设备：上（增删策略button各一个点击后popout设置窗口）下（List） 移动存储加密：上（增删策略button各一个点击后popout设置窗口和《密钥管理》《创建加密盘》）下（左List右详情和开关） 设备管理：上（增删策略button各一个点击后popout设置窗口）下（List） 网站访问控制：上（增删策略button各一个点击后popout设置窗口）下（List） 电子邮件管控：上（增删策略button各一个点击后popout设置窗口）下（List） 上网时间管控：上（增删策略button各一个点击后popout设置窗口）下（List）
+流量限速：popout 网络访问控制：上（增删策略button各一个点击后popout设置窗口）下（List） 非法外联：上（nav搜索范围和设置）下（由新到旧排列的聊天记录） 可信网络：上（增删策略button各一个点击后popout设置窗口）下（List） 网络状态：左（《网络流量》《网络状态》两个category）右（《流》上【折线图】下【List】《状》上【nav设置刷新导出】下【List】） IPMac绑定：popout上（增删button）下（左为checkbox的终端List） Ping工具：popout一个黑的窗口？【黑】
+文件外发管控：上（增删策略button各一个点击后popout设置窗口）下（List） 截屏管控：上（nav搜索范围和设置）下（List） 文件管理：左（终端List需双击）右（磁盘缩略图页面） 屏幕水印：上（增删策略button各一个点击后popout设置窗口）下（List） 备份策略：上（增删策略button各一个点击后popout设置窗口）下（List） 浏览备份：上（nav搜索范围和设置刷新导出）中（search bar）下（由新到旧排列的聊天记录） 发送消息：popout写邮件样式选择对象为跳转到实时屏幕同样的页面。
+远程协助：popout下拉菜单1（选部门）下拉菜单2（选终端）【popout、为什么不继承之前的List选择方式】 时间校准：popout上（说明+时间）下（左下角滑块开关，开启后出现
+<a>请选择终端</a>。右下角确认button） 节能设置：上（增删策略button各一个点击后popout设置窗口）下（List） 分发任务：上（增删策略button各一个点击后popout设置窗口）下（List） 补丁管理：上（nav搜索范围和设置刷新）中（search bar）下（List） 工单管理：上（nav搜索范围和设置刷新）中（search bar）下（List） 桌面个性化：popout上（左【categoryList】右【内容】）下（左【滑块开关，开启后出现
+<a>请选择终端</a>】右【确定取消button】） 身份认证：上（增删策略button各一个点击后popout设置窗口）下（List） 身份管理：上（增删策略button各一个点击后popout设置窗口）下（List） 身份认证日志：上（nav搜索范围和刷新导出）中（search bar）下（List） 活动时间统计：上（nav搜索范围和设置刷新）中（List）下（柱状图组） 浏览网站统计：左（categoryList）右（不同List界面） 流量统计：上（nav搜索范围和设置刷新）中（List）下（柱状图组）
+即时通讯统计：上（nav搜索范围和导出）中（search bar）下（List） 软件使用统计：左（categoryList）右（不同List界面） 外发文件统计：上（nav搜索范围和刷新导出）下（List） 移动存储日志：上（增删策略button各一个点击后popout设置窗口）下（List） 离线时间统计：左（categoryList）右（不同List界面） 打印次数统计：上（nav搜索范围和导出）下（List） 生成客户端：popout一个按钮《生成安装包》点击后几秒打开生成的文件夹《set
+up》。 终端升级：popout描述、选择升级文件、下一步/取消 网址库：上（增删button）中（search bar）下（List） 软件库：上（增删button）中（search bar）下（List） 应用评价：上（search bar）下（List） 移动存储授权：上（增删button）中（search bar）下（List）

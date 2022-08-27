@@ -1,0 +1,40 @@
+<div id="demo">{{fullname}}</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    // var vm = new Vue({
+    //     el: '#demo',
+    //     data: {
+    //         firstname: 'Foo',
+    //         lastname: 'Bar',
+    //         fullname: 'Foo Bar',
+    //     },
+    //     watch: {
+    //         firstname: function (val) {
+    //             this.fullname = val + ' ' + this.lastname;
+    //         },
+    //         lastname:function(val){
+    //             this.fullname=this.firstname+' '+val;
+    //         }
+    //     }
+    // })
+    //上面代码是命令式且重复的。将它与计算属性的版本进行比较：
+    var vm = new Vue({
+        el: '#demo',
+        data: {
+            firstname: 'Foo',
+            lastname: 'Bar',
+        },
+        computed: {
+            fullname: {
+                get: function () {
+                    return this.firstname + ' ' + this.lastname;
+                },
+                set: function (newValue) {
+                    var names = newValue.split(' ')
+                        this.firstname = names[0]
+                        this.lastname = names[names.length - 1]
+                }   
+            }
+        }
+    })
+</script>

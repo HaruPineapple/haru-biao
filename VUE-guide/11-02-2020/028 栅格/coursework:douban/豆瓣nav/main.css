@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-13,
+.col-14,
+.col-15,
+.col-16,
+.col-17,
+.col-18,
+.col-19,
+.col-20,
+.col-21,
+.col-22,
+.col-23,
+.col-24 {
+    float: left;
+}
+
+.row:before,
+.row:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.right {
+    text-align: right;
+}
+
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.head {
+    background: #555;
+}
+
+.global-nav {
+    color: #ccc;
+}
+
+.global-nav a,
+.page-nav .link-group a {
+    font-size: 12px;
+    margin: .5em;
+    display: inline-block;
+}
+
+.global-nav a:hover {
+    color: #fff;
+}
+
+.page-nav {
+    color: #037b82;
+    background: #e5ebe4;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.page-nav .container {
+    display: flex;
+    align-items: center;
+}
+
+.page-nav .container {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#logo {
+    font-size: 33px;
+    font-weight: bold;
+    margin: .2em;
+}
+
+#logo:hover {
+    background: inherit;
+    color: inherit;
+}
+
+.page-nav .link-group a:hover {
+    color: #fff;
+    background: #037b82;
+}
+
+.page-nav input {
+    height: 2.5em;
+    width: 20em;
+    padding: .5em;
+    position: relative;
+    right: 60px;
+    display: inline-block;
+}
+
+.page-title {
+    font-size: 19px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.timeline {
+    padding-right: 15px;
+}
+
+.active {
+    margin: 10px 0;
+}
+
+.active .title {
+    color: #259;
+}
+
+.active-content {
+    padding-left: 10px;
+}
+
+.active .content-prev {
+    margin: 7px 0;
+    padding: 7px;
+    background: #f9f9f9;
+    color: #999;
+}
+
+.like-bar {
+    background: #fae9da;
+    color: #ca6445;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.like-number:after {
+    content: '喜欢';
+    display: block;
+}
+
+.group-source:before {
+    content: '来自';
+    display: inline-block;
+}

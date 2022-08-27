@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slot:</title>
+    <style>
+        .panel {
+            max-width: 300px;
+            border: solid 1px #999;
+            margin-bottom: 15px;
+        }
+
+        .panel>* {
+            padding: 15px;
+        }
+
+        .panel .title {
+            border-bottom: 1px solid #999;
+        }
+
+        .panel .footer {
+            border-top: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <panel>
+            <div slot="title">Lorem</div>
+            <div slot="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veniam delectus harum. Qui facere magni quidem expedita ratione sint, hic veniam. Dolore voluptas, placeat esse tenetur amet assumenda fugit expedita!
+            </div>
+            <div slot="footer">阅读更多</div>
+        </panel>
+    </div>
+    <template id="panel-tpl">
+        <div class="panel">
+            <div class="title">
+                    <slot name="title"></slot>                
+            </div>
+            <div class="content">
+                <slot name="content"></slot>
+            </div>
+            <div class="footer">
+                    <slot name="footer">more</slot>                
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js"></script>
+<script>
+
+</script>

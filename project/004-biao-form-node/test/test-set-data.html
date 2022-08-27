@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test set data</title>
+</head>
+
+<body>
+    <style>
+        input[type=text],
+                    input[type=number]{
+                        width: 100%;
+                    }
+                </style>
+
+
+    <form id="b">
+        <input type="text" name="name" placeholder="name">
+        <input type="number" name="age" placeholder="age">
+        <input type="email" name="email" placeholder="email">
+        <input type="date" name="birthday" placeholder="birthday">
+        <div>
+            性别
+            <label>
+                男<input type="radio" name="gender" value="male">
+            </label>
+            <label>
+                女<input type="radio" name="gender" value="female">
+            </label>
+        </div>
+        <div>
+            取向
+            <label>
+                男<input type="checkbox" name="orientation" value="male">
+            </label>
+            <label>
+                女<input type="checkbox" name="orientation" value="female">
+            </label>
+            <label>
+                车<input type="checkbox" name="orientation" value="car">
+            </label>
+        </div>
+        <input type="number" name="balance" placeholder="余额">
+        <button type="submit">submit</button>
+    </form>
+    <script src="../biaoForm.js"></script>
+    <script>
+    let data=biaoForm.getData(a);
+    console.log(data);
+    </script>
+
+</body>
+
+</html>

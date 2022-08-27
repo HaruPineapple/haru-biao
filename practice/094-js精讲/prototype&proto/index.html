@@ -1,0 +1,40 @@
+<script>
+    var a=[2,4,6,8];
+
+    function each(arr,callback){
+        for(var i =0;i<arr.length;i++){
+            let item=arr[i];
+            callback(item);
+        }
+    }
+    each(a,function(it){
+        if(it>5)
+            console.log(it)
+    })
+    each(a,function(it){
+        if(it<5)
+            console.log(it)
+    })
+
+    // function A(){}
+    // A.prototype.name='lalala';
+    // let a=new A();
+    // let b=new A();
+    // console.log(a.__proto__===b.__proto__)
+
+
+    // function user(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.greet = function () {
+    //         console.log('yo,大家好我叫' + this.name + '我今年' + this.age + '岁了.')
+    //     }
+    // }
+
+    // var whh = new user('whh',12);
+    // var lsd = new user('lsd',20);
+
+    // whh.greet();
+    // lsd.greet();
+
+</script>

@@ -1,0 +1,33 @@
+.aic {
+    display: flex;
+    align-items: center;
+}
+
+.home-nav {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.home-nav .link-group {
+    padding-left: 150px;
+}
+
+.home-nav a {
+    padding: 10px;
+}
+
+.home-nav a:hover {
+    color: #ff6700;
+    transition-duration: .3s;
+}
+
+.search-input {
+    width: 15em;
+    height: 2.5em;
+}
+
+.search-btn {
+    height: 2.5em;
+    width: 2.5em;
+}

@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.col {
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+}
+
+.row:before,
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col-6 {
+    width: 25%;
+}
+
+.card {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+
+.price:after {
+    content: '元/平';
+}
+
+.birthday:after {
+    content: '建';
+}

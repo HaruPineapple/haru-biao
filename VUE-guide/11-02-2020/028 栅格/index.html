@@ -1,0 +1,32 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .col {
+        float: left;
+        border: solid;
+    }
+    
+    .row:before,
+    .row:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+</style>
+<link rel="stylesheet" href="./col.css">
+
+<body>
+    <div class="row">
+        <div class="col col-12-1">A</div>
+        <div class="col col-12-1">A</div>
+        <div class="col col-12-1">A</div>
+        <div class="col col-12-9">A</div>
+        <div class="col col-12-2">A</div>
+        <div class="col col-12-10">B</div>
+        <div class="col col-12-4">B</div>
+        <div class="col col-12-4">B</div>
+        <div class="col col-12-4">B</div>
+    </div>
+</body>

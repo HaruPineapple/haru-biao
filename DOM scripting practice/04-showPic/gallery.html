@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            display: inline;
+        }
+
+        .img-placeholder {
+            border: 5px double black;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Snapshots
+    </h1>
+    <ul class="images">
+        <li>
+            <a href="http://dummyimage.com/600x400/111" onclick="showPic(this); return false" title="111">111</a>
+        </li>
+        <li>
+            <a href="http://dummyimage.com/600x400/444" onclick="showPic(this); return false" title="444">444</a>
+        </li>
+        <li>
+            <a href="http://dummyimage.com/600x400/777" onclick="showPic(this); return false" title="777">777</a>
+        </li>
+        <li>
+            <a href="http://dummyimage.com/600x400/aaa" onclick="showPic(this); return false" title="aaa">aaa</a>
+        </li>
+
+        <img src="http://dummyimage.com/600x400/fff" id="placeholder" />
+
+        <p id="discription">
+            choose an image
+        </p>
+    </ul>
+    <script src="script/showPic.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.prom-group {
+    padding-top: 10px;
+}
+
+.prom-button-group {
+    background-color: #333;
+    color: #ddd;
+}
+
+.prom-button {
+    padding: 25px 10px;
+}
+
+.prom-button:hover {
+    color: #fff;
+    transition-duration: .2s;
+}
+
+.prom-card img {
+    height: 100%;
+}

@@ -1,0 +1,50 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: .5em;
+    background-color: black;
+    color: #fff;
+}
+
+form button {
+    display: block;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead,
+tr {
+    border-bottom-style: solid;
+    border-color: #666;
+    border-width: 3px;
+}
+
+tr {
+    border-width: 1px;
+}
+
+td,
+th {
+    padding: .3em;
+}

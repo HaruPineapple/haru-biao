@@ -1,0 +1,22 @@
+<div id="root"></div>
+<div id="footer"></div>
+
+<script>
+    var root = document.getElementById('root');
+    var footer = document.getElementById('footer');
+
+    // patent：母元素
+    // text：button内的文字
+    function creatBtn(parent,text='Yo'){
+        var btn=document.createElement('button');
+        btn.innerText=text;
+        parent.appendChild(btn);
+    }
+    
+    creatBtn(root);
+    creatBtn(root);
+    creatBtn(root,'Hahaha');
+    creatBtn(footer,'Hahaha');
+
+
+</script>

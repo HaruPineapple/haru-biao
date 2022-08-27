@@ -1,0 +1,35 @@
+.global-nav {
+    background: #444;
+    color: #bbb;
+    font-size: 10px;
+}
+
+.global-nav a {
+    display: inline-block;
+    padding: 7px 5px;
+}
+
+.global-nav a:hover {
+    color: #eee;
+}
+
+.sepa a:after {
+    content: '|';
+    position: relative;
+    color: #555;
+    left: 7px;
+}
+
+.global-nav .cart {
+    width: 8em;
+    height: 2.5em;
+    margin: 0;
+    border: none;
+    background-color: #555;
+    color: #bbb;
+}
+
+.global-nav .cart:hover {
+    background-color: #fff;
+    color: orangered;
+}
